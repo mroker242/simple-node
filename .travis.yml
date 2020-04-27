@@ -1,0 +1,19 @@
+language: node_js
+node_js:
+   -13
+
+
+services:
+   - docker
+
+
+# Pre-testing  installs
+install: 
+   - echo "nothing needs to be done here"
+
+script:
+   - docker --version # print the current version of docker
+   - docker build -t simple-node .
+
+# after success
+   echo "successful"
